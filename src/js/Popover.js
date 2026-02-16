@@ -58,7 +58,7 @@ export default class Popover {
     });
     
     this.popover = this.createPopoverElement();
-    document.body.appendChild(this.popover);
+    document.body.append(this.popover);
     
     this.positionPopover();
     this.isVisible = true;
@@ -88,7 +88,7 @@ export default class Popover {
 
     const arrow = document.createElement('div');
     arrow.className = 'popover-arrow';
-    popover.appendChild(arrow);
+    popover.append(arrow);
     
     // Создать заголовок, если есть название
 
@@ -96,7 +96,7 @@ export default class Popover {
       const header = document.createElement('h3');
       header.className = 'popover-header';
       header.textContent = this.title;
-      popover.appendChild(header);
+      popover.append(header);
     }
     
     // Создать тело
@@ -104,7 +104,7 @@ export default class Popover {
     const body = document.createElement('div');
     body.className = 'popover-body';
     body.textContent = this.content;
-    popover.appendChild(body);
+    popover.append(body);
     
     return popover;
   }
